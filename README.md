@@ -25,7 +25,8 @@ Procédure de configuration d'un VLAN sur un switch
 Procédure de configuration d'un port pour VLAN (attribuer à un VLAN ou mode TRUNK)
 Procédure de configuration d'un routeur pour une passrelle VLAN
 Procédure de configuration des filtres du routeur (ACLs)
-
+(Gestion des VLAN en général)
+Monitoring de port
 
 BONUS:
 Gestion de Git et Github
