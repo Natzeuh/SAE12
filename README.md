@@ -33,8 +33,15 @@ R101, R106, R103, R102, R108
 
 * Utilisation de wireshark
     - TCP Stream
-	- Construction d'un filtre
+	- Construction et utilisation d'un filtre
+	- Utilisation de l'onglet statistiques
+	- 
 
+* Affichage du cache ARP
+* Utilisation de TCPdump
+    - trouver équivalent windows ?
+* Controle du cache ARP
+* Affichage de la table de commutation d'un switch.
 
 
 BONUS:
