@@ -42,7 +42,10 @@ R101, R106, R103, R102, R108
     - trouver équivalent windows ?
 * Controle du cache ARP
 * Affichage de la table de commutation d'un switch.
-
+* Utilisation de hping (et équivalent)
+* Utilisation de traceroute (et équivalent)
+* Procédure pour utiliser un PC en tant que routeur
+*
 
 BONUS:
 
