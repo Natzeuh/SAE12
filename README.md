@@ -3,84 +3,56 @@
 R101, R106, R103, R102, R108
 
 
-Par défaut les machines sous Debian utilisent l’application Network Manager pour gérer le réseau.
-La configuration est par défaut en DHCP (mode automatique). Pour le désactiver (afin de ne pas
-voir votre configuration manuelle être écrasée toute les 3 minutes, il faut éditer le fichier :
-etc/netplan/01-netcfg.yaml. Sur la ligne dhcp4 remplacer le « yes » par un « no ».
-
-
-ip link set down dev eno1
-désactiver la carte réseau eno1
-sudo
-mode admin
-man
-info sur une commande
-id
-elle permet d'identifier l'utilisateur courant
-exit
-su pase en mode admin
-ip link set up dev eno1
+# Commande IP
 ip : ensemble de commandes permettant de configurer les cartes réseaux
+
+## Objet
 • link : option permettant d'accéder aux propriétés du lien local (activation, voisins, etc.)
 • set : avec en option up ou down active le lien ou la carte réseau
-• dev enoX : spécifie l'interface visée ici eno1
-activer la carte réseau
-Pour attribuer (ou ajouter) une adresse à la carte eno1 de la machine 11 de la la salle 210
-ip addr add 10.210.11.1/16 dev eno1
-addr : option permettant de gérer les adresses ip
+• dev enoX : spécifie l'interface visée ici eno
+ip link set down dev eno1 => désactiver la carte réseau eno1
 • add : ajout d'une adresse (del pour supprimer) suivi de l'adresse IP voulue et du masque de
-sous réseau (le /16 c'est très important mais on verra plus tard à quoi cela correspond)
-
- ping
-ip route add default via 10.210.255.254 dev eno1
+sous réseau
+•addr : option permettant de gérer les adresses ip
 • route : option permettant de spécifier les chemins à suivre pour le message sortant de votre
-pc
-• add : option pour ajouter un chemin normalement suivi d'une adresse de réseau (dans notre
-cas c'est une route par défaut, celle à utiliser en dernier recours donc on utilise le mot clef
-default)
 
-mii-tool = ethtool
-apt install et les dérivé 
-ip link show <Nom De Votre Interface>
-ip addr show <Nom De Votre Interface>
-ip addr show <Nom De Votre Interface>
-Attention sous Linux lorsque l'on lance un ping sans option celui-ci ne s'arrête pas tout seul. Il faut
-utiliser la combinaison de touches « Ctrl »+ « C » pour terminer son exécution.
-
-
-TP4 et 5 à regardé de plus prés
-useradd
-pwd
-passwd
-who
-domainname <votreNomDeDomaine>
-
-. Lancer le service nis sur le client à l'aide de systemctl start ypbind.service
-nscd.service
-apt autoremove --purge nis.
+## Commande Utile
+- ip link set up dev <Nom de la carte réseaux> => Permet d'activé la carte réseaux
+- ip addr add <Ip de la machine/masque> dev <Nom de la carte réseaux> => permet d'attribué/ajouté une addresse à votre carte réseaux 
+- ip route add default via <Ip de la machine> dev <Nom de la carte réseaux> => permet d'ajouté une route par défault
+- ip link show <Nom De Votre Interface> => montre les informations de la carte réseaux ciblé
+- ip addr show <Nom De Votre Interface>
 
 
 
 
+### sudo => permet momentanément d'avoir les permissions SUperUsers
+man => donne plus d'info sur une commande 
+id => donne l'id de utilisateur courant
+exit => quitter
+su => pase en mode admin permanent
+ping => permet de tester la connection entre 2 machine (Il faut
+utiliser la combinaison de touches « Ctrl »+ « C » pour terminer son exécution si on y a pas mis d'options)
+mii-tool = ethtool => permet d'affiché ou de modifié certains paramètre de la carte réseaux
+apt => permet de géré l'installation, la MAJ et la désinstallation à partir de source APT
+useradd => ajouté un utilisateur
+pwd => affiche le nom du répertoire courant
+passwd => permet à l'utilisateur de changer son mdp
+who => permet d'affiché les utilisateurs connéctés
+chmod => permet de modifié l'accés aux fichiers et aux répertoires séléctionné 
+chown => permet de changer le propriétaire d'un fichier
+chgrp => permet de changer le groupe d'utilisateur à qui appartien le fichier
+mount => permet que le système d'exploitation rende un fichier accessible à un endroit spécifié
 
-
-
-
-
-
-rm [-dfirvR] [--directory] [--force] [--interactive] [--recursive] [--help] [--version] [--verbose] nom...
--d, --directory : Efface un repertoire avec `unlink' a la place de `rmdir', ne nécessitant pas que le repertoire soit vide. Seul le Super-User peut utiliser
-cette option. Comme un `unlink' sur un répertoire déréférence tous les fichiers qui y étaient contenus, il est conseille d'effectuer un fsck sur le système
-de fichiers après cette opération.
+### rm [-dfirvR] [--directory] [--force] [--interactive] [--recursive] [--help] [--version] [--verbose] nom...
+-d, --directory => Efface un repertoire avec `unlink' a la place de `rmdir', ne nécessitant pas que le repertoire soit vide. Seul le Super-User peut utiliser
+cette option.
 -f, --force : Ignorer les fichiers non existants, et ne pas interroger l'utilisateur.
 -i, --interactive : Demander a l'utilisateur de confirmer l'effacement de chaque fichier. Si la réponse ne commence pas par `y' ou `Y', le fichier est
 ignore.
--r, -R, --recursive : Supprimer récursivement le contenu des répertoires
-chmod
-chown
-chgrp
-mount
-compilation du noyau:
+-r, -R, --recursive : Supprimer récursivement le contenu des répertoires 
+
+### Compilation du noyau:
 ln –s /usr/scr/linux-2.2.16 /usr/src/linux
 make xconfig
 make dep clean bzImage modules modules-install
@@ -92,10 +64,12 @@ root=/dev/hdxx
 read-only
 lilo (pour installer le nouveau boot)
 reboot
-Charger un module:
+
+### Charger un module:
 modprobe nom_module [options]
 insmod nom_module [options]
-Répertoires:
+
+### Répertoires:
 / racine /bin exécutables commandes
 /sbin exe, commandes gestion fichiers
 /etc config. Linux périphériques
@@ -108,12 +82,14 @@ primary slave part x /dev/hdbx secondary master /dev/hdcx
 secondary slave /dev/hddx disquette /dev/fd0
 COM /dev/ttySx,caux carte ethernet /dev/ethx
 SCSI,SATA /dev/sdax (srx)
-mknod /dev/hdxx c= fichier majeur
-Partitionner un disque : fdisk /dev/hdx ou diskdrake gparted ...
-Formater un disque : mk2fs /dev/hdxx
-Contrôler un disque dur : hdparm
- init
-run level :
+mknod /dev/hdxx => fichier majeur
+
+### Partitionner un disque : fdisk /dev/hdx ou diskdrake gparted ...
+### Formater un disque : mk2fs /dev/hdxx
+### Contrôler un disque dur : hdparm
+
+### run level :
+init
 help
 Halt, reboot arrêter, redémarrer
 passwd changer le mot de passe
