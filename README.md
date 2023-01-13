@@ -45,7 +45,8 @@ R101, R106, R103, R102, R108
 * Utilisation de hping (et équivalent)
 * Utilisation de traceroute (et équivalent)
 * Procédure pour utiliser un PC en tant que routeur
-*
+* Utilisation de ``openssl s_client``
+
 
 BONUS:
 
