@@ -15,6 +15,17 @@ Rendez-vous sur le site https://www.wireshark.org/download.html et télchargez l
 </div>
 
 Une fois l'installeur téléchargé, ouvrez le fichier
+![Installateur de WireShark dans l'explorateur de fichier]
+
+!! ATTENTION, un accès administrateur est nécéssaire pour installer WireShark !!
+
+Suivez les instructions, confirmez votre accord avec la licence du logiciel etc..
+
+Si Npcap ou WinPcap ne sont pas installés, l'installateur vous proposera d'installer Npcap, acceptez, il est nécéssaire d'avoir ce logiciel pour capter et lire les paquets
+
+Si USBPcap n'est pas installé, l'installateur vous proposera de l'installer, vous n'êtes pas obligés d'accepter. Ce logiciel vous permettra d'analyser le traffic passant par l'USB.
+
+Ensuite, suivez les instructions de l'installateur.
 
 #### Linux
 
