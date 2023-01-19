@@ -15,7 +15,7 @@ Rendez-vous sur le site https://www.wireshark.org/download.html et télchargez l
 </div>
 
 Une fois l'installeur téléchargé, ouvrez le fichier
-![Installateur de WireShark dans l'explorateur de fichier]
+ ![Installateur de WireShark dans l'explorateur de fichier]
 
 !! ATTENTION, un accès administrateur est nécéssaire pour installer WireShark !!
 
