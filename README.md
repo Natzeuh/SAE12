@@ -38,13 +38,12 @@ R101, R106, R103, R102, R108
 
 * Affichage du cache ARP
 * Utilisation de TCPdump
-    - trouver équivalent windows ?
 * Controle du cache ARP
 * Affichage de la table de commutation d'un switch.
 * Utilisation de hping (et équivalent)
 * Utilisation de traceroute (et équivalent)
 * Procédure pour utiliser un PC en tant que routeur
-* Utilisation de ``openssl s_client``
+
 
 
 BONUS:
