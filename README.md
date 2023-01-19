@@ -30,7 +30,7 @@ sous réseau
 man => donne plus d'info sur une commande 
 id => donne l'id de utilisateur courant
 exit => quitter
-su => pase en mode admin permanent
+su => passe en mode admin permanent
 ping => permet de tester la connection entre 2 machine (Il faut
 utiliser la combinaison de touches « Ctrl »+ « C » pour terminer son exécution si on y a pas mis d'options)
 mii-tool = ethtool => permet d'affiché ou de modifié certains paramètre de la carte réseaux
@@ -89,51 +89,48 @@ mknod /dev/hdxx => fichier majeur
 ### Contrôler un disque dur : hdparm
 
 ### run level :
-init
-help
-Halt, reboot arrêter, redémarrer
-passwd changer le mot de passe
-umask xxx permissions par défaut en octal
-su changer de nom d’utilisateur courant (changer login actuel )
-id identifier un utilisateur ( UID,GIDs)
-set , export positionner des variables d’environnement
-clear effacer écran
-ls liste des fichiers (18 options !)
-pwd position dans les répertoires
-mkdir créer un répertoire
-cd change répertoire
-cp copier fichier
-mv déplacer fichier
-rm,rmdir effacer fichier ou répertoire
-sort trier des fichiers
-find rechercher un fichier ou texte
-grep,rgrep recherche d’un mot (occurrence) dans un fichier, répertoire
-updatedb,locate mise à jour de la base de recherche, rechercher dans la base
-cat,more concaténer, afficher un fichier texte
-od affichage d’un fichier binaire
-dd conversion de fichiers
-diff comparer 2 fichiers
-lp imprimer un fichier
-at lancement de processus à un moment précis
-nice exécuter un processus à faible priorité
-nohup exécuter un processus même après déconnexion
->,>>,< redirection vers fichier ,écran …
-id donne la liste des utilisateurs et des groupes
-gpasswd gère les groupes
-fdisk /dev/hdx permet de partionner un disque
-mkfs -t <fs> /dev/... formater 
-fsck /dev/hdx vérifier l’intégrité du système de fichiers
-df disque libre
-hdparm
-umask xxx change les attributs par défaut xxx en octal
-link,unlink,ln création suppression de liens
-ps affichage des processus en cours
-( UID,GID,PID,PPID,C,STIME ,TTY,TIME,COMMAND)
-crontab fichier permet d’exécuter des commandes automatiques (daemon cron)
+init => permet d'interagir sur le run level du système et d'annoncer à chaque processus que le système va redémarrer ou s'éteindre et loguer cette action (c'est la première commande éfféctuer par le noyaux au démarrage du pc)
+- init à pour équivalent sous windows wininit.exe qui est le premier fichier que win dows va lancé à son démarrage.
+help => permet d'accéder à l'aide des autres commandes 
+- 
+Halt => reboot arrêter, redémarrer
+passwd => permet de changer le mot de passe
+umask xxx => donner des permissions pour l'ensemble des fichiers créers
+id => identifier un utilisateur ( UID,GIDs)
+set | export => positionner des variables d’environnement
+clear => effacer écran
+ls => liste des fichiers (18 options !)
+pwd => position dans les répertoires
+mkdir => créer un répertoire
+cd => change répertoire
+cp => copier fichier
+mv => déplacer fichier
+rm,rmdir => effacer fichier ou répertoire
+sort => trier des fichiers
+find => rechercher un fichier ou texte
+grep,rgrep => recherche d’un mot (occurrence) dans un fichier, répertoire
+updatedb | locate => mise à jour de la base de recherche, rechercher dans la base
+cat => afficher un fichier texte
+od => affichage d’un fichier binaire
+dd => conversion de fichiers
+diff => comparer 2 fichiers
+lp => imprimer un fichier
+at => lancement de processus à un moment précis
+nice => exécuter un processus à faible priorité
+nohup => exécuter un processus même après déconnexion
+>,>>,< => redirection vers fichier ,écran …
+id => donne la liste des utilisateurs et des groupes
+gpasswd => gère les mots de passes des groupes
+fdisk /dev/hdx => permet de partionner un disque
+mkfs -t <fs> /dev/... => formater 
+fsck /dev/hdx => vérifier l’intégrité du système de fichiers
+df => affiche des informations sur l'espace total et l'espace disponible sur un système de fichiers
+hdparm => hdparm est un utilitaire en ligne de commande sur Linux pour visualiser et repérer les paramètres d'un disque IDE : Mémoire cache, sleep mode, gestion de l'alimentation , gestion acoustique. hdparm permet d'améliorer (ou de dégrader...) les performances d'un disque
+link,unlink,ln => création suppression de liens
+ps => affichage l'état et les informations des processus en cours
 kill supprimer des processus en cours ( -9 : sans condition)
 exec
 fork
 cron
 cat
-mkdir
 cd
