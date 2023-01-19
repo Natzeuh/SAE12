@@ -35,36 +35,36 @@ Ouvrez un terminal de commande sur votre machine
 
 Tapez la commande ``sudo add-apt-repository ppa:wireshark-dev/stable``
 
-![Capture d'écran du terminal]()
+![Capture d'écran du terminal](/images/wireshark_linux_add_repo.png)
 
 Puis tapez ``sudo apt-get update``
 
-![Capture d'écran du terminal]()
+![Capture d'écran du terminal](/images/wireshark_linux_maj_repo.png)
 
 Installez wireshark avec la commande ``sudo apt-get install wireshark``
 
-![Capture d'écran du terminal]()
+![Capture d'écran du terminal](/images/wireshark_linux_install.png)
 
 Wireshark est maintenant installé, pour vous assurer de son bon fonctionnement ouvrez le logicel à laide de la commande ``sudo wireshark``
 
 Le logiciel devrait démarrer immédiatement.
 
-![Capture d'écran de la fenêtre d'acceuil de Wireshark]()
+![Capture d'écran de la fenêtre d'acceuil de Wireshark](/images/wireshark_linux_opened.png))
 
 En cas d'erreur ressemblant à ``couldn't run /usr/bin/dumpcap in child process: Permission Denied``, tapez les commandes suivantes dans le terminal
 
 ``sudo dpkg-reconfigure wireshark-common``
 
-![Capture d'écran du terminal]()
+![Capture d'écran du terminal](/images/wireshark_linux_reconf.png)
 
 
 Sélectionnez ``<Oui>``
 
-![Capture d'écran page de confirmation]()
+![Capture d'écran page de confirmation](/images/wireshark_linux_ecran_conf.png)
 
 Une fois l'installation (et l'éventuelle erreur) faite, ajoutez votre utilisateur au groupe ``wireshark`` avec la commande ``sudo adduser $NOMDUTILISATEUR wireshark`` (remplacez ``$NOMDUTILISATEUR`` par votre nom d'utilisateur) Cette commande vous permettra d'utiliser wireshark sans passer par le mode administrateur
 
-![Capture d'écran du terminal]()
+![Capture d'écran du terminal](/images/wireshark_linux_adduser.png)
 
 Vous pouvez alors utiliser wireshark !
 
@@ -74,7 +74,7 @@ Pour démarrer une capture sur wireshark, il vous suffit de sélectionner l'inte
 
 Pour capturer les paquets de toutes les interfaces vous pouvez choisir l'interface ``any``
 
-![Capture d'écrande wireshark]()
+![Capture d'écrande wireshark](/images/wireshark_start_capture.png)
 
 4. Construction d'un filtre
 
