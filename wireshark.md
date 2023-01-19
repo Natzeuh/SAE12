@@ -29,9 +29,56 @@ Ensuite, suivez les instructions de l'installateur.
 
 #### Linux
 
-#### macOS ?
+Ouvrez un terminal de commande sur votre machine
+
+!! ATTENTION, un accès administrateur est nécéssaire pour installer WireShark !!
+
+Tapez la commande ``sudo add-apt-repository ppa:wireshark-dev/stable``
+
+![Capture d'écran du terminal]()
+
+Puis tapez ``sudo apt-get update``
+
+![Capture d'écran du terminal]()
+
+Installez wireshark avec la commande ``sudo apt-get install wireshark``
+
+![Capture d'écran du terminal]()
+
+Wireshark est maintenant installé, pour vous assurer de son bon fonctionnement ouvrez le logicel à laide de la commande ``sudo wireshark``
+
+Le logiciel devrait démarrer immédiatement.
+
+![Capture d'écran de la fenêtre d'acceuil de Wireshark]()
+
+En cas d'erreur ressemblant à ``couldn't run /usr/bin/dumpcap in child process: Permission Denied``, tapez les commandes suivantes dans le terminal
+
+``sudo dpkg-reconfigure wireshark-common``
+
+![Capture d'écran du terminal]()
+
+
+Sélectionnez ``<Oui>``
+
+![Capture d'écran page de confirmation]()
+
+Une fois l'installation (et l'éventuelle erreur) faite, ajoutez votre utilisateur au groupe ``wireshark`` avec la commande ``sudo adduser $NOMDUTILISATEUR wireshark`` (remplacez ``$NOMDUTILISATEUR`` par votre nom d'utilisateur) Cette commande vous permettra d'utiliser wireshark sans passer par le mode administrateur
+
+![Capture d'écran du terminal]()
+
+Vous pouvez alors utiliser wireshark !
 
 3. Démarrer une capture
+
+Pour démarrer une capture sur wireshark, il vous suffit de sélectionner l'interface sur laquelle vous voulez capturer des paquets.
+
+Pour capturer les paquets de toutes les interfaces vous pouvez choisir l'interface ``any``
+
+![Capture d'écrande wireshark]()
+
 4. Construction d'un filtre
+
+
+
 5. Suivre un flux TCP
 6. L'onglet statistiques
