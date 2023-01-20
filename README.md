@@ -88,49 +88,23 @@ mknod /dev/hdxx => fichier majeur
 ### Formater un disque : mk2fs /dev/hdxx
 ### Contrôler un disque dur : hdparm
 
-### run level :
-init => permet d'interagir sur le run level du système et d'annoncer à chaque processus que le système va redémarrer ou s'éteindre et loguer cette action (c'est la première commande éfféctuer par le noyaux au démarrage du pc)
-- init à pour équivalent sous windows wininit.exe qui est le premier fichier que win dows va lancé à son démarrage.
-help => permet d'accéder à l'aide des autres commandes 
-- 
-Halt => reboot arrêter, redémarrer
-passwd => permet de changer le mot de passe
-umask xxx => donner des permissions pour l'ensemble des fichiers créers
-id => identifier un utilisateur ( UID,GIDs)
-set | export => positionner des variables d’environnement
-clear => effacer écran
-ls => liste des fichiers (18 options !)
-pwd => position dans les répertoires
-mkdir => créer un répertoire
-cd => change répertoire
-cp => copier fichier
-mv => déplacer fichier
-rm,rmdir => effacer fichier ou répertoire
-sort => trier des fichiers
-find => rechercher un fichier ou texte
-grep,rgrep => recherche d’un mot (occurrence) dans un fichier, répertoire
-updatedb | locate => mise à jour de la base de recherche, rechercher dans la base
-cat => afficher un fichier texte
-od => affichage d’un fichier binaire
-dd => conversion de fichiers
-diff => comparer 2 fichiers
-lp => imprimer un fichier
-at => lancement de processus à un moment précis
-nice => exécuter un processus à faible priorité
-nohup => exécuter un processus même après déconnexion
->,>>,< => redirection vers fichier ,écran …
-id => donne la liste des utilisateurs et des groupes
-gpasswd => gère les mots de passes des groupes
-fdisk /dev/hdx => permet de partionner un disque
-mkfs -t <fs> /dev/... => formater 
-fsck /dev/hdx => vérifier l’intégrité du système de fichiers
-df => affiche des informations sur l'espace total et l'espace disponible sur un système de fichiers
-hdparm => hdparm est un utilitaire en ligne de commande sur Linux pour visualiser et repérer les paramètres d'un disque IDE : Mémoire cache, sleep mode, gestion de l'alimentation , gestion acoustique. hdparm permet d'améliorer (ou de dégrader...) les performances d'un disque
-link,unlink,ln => création suppression de liens
-ps => affichage l'état et les informations des processus en cours
-kill supprimer des processus en cours ( -9 : sans condition)
-exec
-fork
-cron
-cat
-cd
+* Utilisation de wireshark
+    - TCP Stream
+	- Construction et utilisation d'un filtre
+	- Utilisation de l'onglet statistiques
+	- 
+
+* Affichage du cache ARP
+* Utilisation de TCPdump
+    - trouver équivalent windows ?
+* Controle du cache ARP
+* Affichage de la table de commutation d'un switch.
+* Utilisation de hping (et équivalent)
+* Utilisation de traceroute (et équivalent)
+* Procédure pour utiliser un PC en tant que routeur
+* Utilisation de ``openssl s_client``
+
+
+BONUS:
+
+Gestion de Git et Github
