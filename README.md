@@ -4,7 +4,7 @@ R101, R106, R103, R102, R108
 
 
 # Commande IP
-ip : ensemble de commandes permettant de configurer les cartes réseaux
+ip : ensemble de commandes permettant de configurer les cartes réseaux ***FAIT***
 
 ## Objet
 • link : option permettant d'accéder aux propriétés du lien local (activation, voisins, etc.)
