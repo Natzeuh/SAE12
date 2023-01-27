@@ -27,3 +27,5 @@
 ### Activer / désactiver une carte réseau
 
 |Linux||Windows|
+|:-||:-|
+|``sudo ip link set <up/down> dev <nom de la carte>``|||
