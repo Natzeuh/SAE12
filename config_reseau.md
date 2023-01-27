@@ -23,3 +23,7 @@
 |Si pas de serveur DHCP||Si pas de serveur DHCP|
 |``ip a add <adresse ip>/<masque> dev <carte réseau>``||``netsh interface ip set address name="<nom carte réseau>" static <ip> <masque> <passerelle>``|
 |``sudo ip r add default via <ip passerelle> dev <nom de la carte>``|||
+
+### Activer / désactiver une carte réseau
+
+|Linux||Windows|
