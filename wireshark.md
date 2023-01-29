@@ -17,7 +17,7 @@ Rendez-vous sur le site https://www.wireshark.org/download.html et télchargez l
 Une fois l'installeur téléchargé, ouvrez le fichier
  ![Installateur de WireShark dans l'explorateur de fichier]
 
-!! ATTENTION, un accès administrateur est nécéssaire pour installer WireShark !!
+**!! ATTENTION, un accès administrateur est nécéssaire pour installer WireShark !!**
 
 Suivez les instructions, confirmez votre accord avec la licence du logiciel etc..
 
@@ -31,7 +31,7 @@ Ensuite, suivez les instructions de l'installateur.
 
 Ouvrez un terminal de commande sur votre machine
 
-!! ATTENTION, un accès administrateur est nécéssaire pour installer WireShark !!
+**!! ATTENTION, un accès administrateur est nécéssaire pour installer WireShark !!**
 
 Tapez la commande ``sudo add-apt-repository ppa:wireshark-dev/stable``
 
@@ -76,9 +76,48 @@ Pour capturer les paquets de toutes les interfaces vous pouvez choisir l'interfa
 
 ![Capture d'écrande wireshark](/images/wireshark_start_capture.png)
 
-4. Construction d'un filtre
+4. Construction d'un filtre d'affichage
+
+Une fois que vous avez commencé une capture, vous pouvez filtrer les paquets en entrant une filtre dans la barre de filtres
+
+![Capture d'écran Wireshark](/images/wireshark_win_filter.png)
+
+Un simple se construit de la manière suivante
+``<Caractérisitque>==<Contenu>``
+
+Par exemple le filtre
+``ip.dst==192.168.1.33``
+nous montrera les paquets ayant pour destination la machine avec l'IP 192.168.1.33
+
+Tableau des filtres de base
+|Filtre|Signification|
+|-|-|
+|ip.dst|IP a qui est destiné le paquet|
+|ip.src|IP d'où provient le paquet|
+|tcp.port|Port TCP de destination|
+|udp.port|Port UDP de destination|
+|``<Nom d'un protocole>``|Paquets ayant le protocole spécifié|
+
+De plus, vous pouvez créer un filtre ayant plusieurs caractéritiques
+
+Par exemple le filtre
+``ip.src==192.168.1.35 || ip.dst==192.168.1.66`` Vous montrera tous les paquets pour lesquels l'IP ``192.168.1.35`` est source ainsi que les paquets pour lesquels l'ip ``192.168.1.66`` est destinataire
+
+|Opérateur|Signifaction|
+|-|-|
+|``&&`` / ``and``|Paquets respectant un filtre ET l'autre|
+|``\|\|`` / ``or``|Paquets respectant un filtre OU l'autre OU les deux|
+|``^^`` / ``xor``|Paquets respectant un filtre OU l'autre mais pas les deux|
+|``!`` / ``not``|Paquets ne respectant pas un filtre|
 
 
 
 5. Suivre un flux TCP
-6. L'onglet statistiques
+
+Le protocole TCP a cette particularité de se comporter comme une conversation entre les machines, nous sommes alors en mesure de retracer une de ces converstions avec le suivi de flux TCP
+
+![Capture d'écran Wire Shark](/images/wireshark_win_tcpstream.png)
+
+Vous donnant alors la converstation comme il suit
+
+![Capture d'écran Wireshark TCP Flux](/images/wireshark_win_fluxtcp.png)
