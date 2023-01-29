@@ -58,7 +58,166 @@ Si la carte réseau est allumée et connectée et que la connexion au réseau ne
 |``sudo ip r add default via <ip passerelle> dev <nom de la carte>``|||
 
 
-## Commandes de bases
+## Commandes de base
+
+###  Su
+
+Su permets d'ouvrir la session du superuser <br>
+![``su``](/images/reste/su.PNG)
+
+### Man
+
+Cette commande permet de voir des informations sur une autre commande <br>
+![``man``](/images/man1.PNG)<br>
+![Photo numéro 2](/images/man2.PNG)
+
+### Exit
+Permet de quitter une interface <br>
+Par exemple: Si je souhaite quitté l'interface de l'users root je n'ais quà taper exit
+
+![``exit``](/images/exit.PNG)
+
+L'équivalent sur windows est aussi ``exit``
+
+## ID
+
+Donne le Uid,Gid et le groupe de celui qui tape la commande. <br>
+![``id``](/images/id.PNG)
+  
+## Ping
+
+cette commande permet de tester la connection entre 2 machine (Il faut
+utiliser la combinaison de touches « Ctrl »+ « C » pour terminer son exécution si on y a pas mis d'options)
+<br>
+![``ping <ip de la machine>``](/images/ping.PNG)
+
+L'équivalent windows est aussi ``ping``
+
+## APT
+Permet de géré l'installation, la MAJ et la désinstallation à partir de source APT
+
+
+### Objets
+
+- install ,remove => permet d'installer/désinstaller un package APT
+- upgrade => mettre à jour le package APT
+- Show => Donne des informations sur la package séléctionné 
+- list => Donne la liste des packages APT
+
+![``apt install <objet>``](/images/aptinstall.PNG)
+
+## Who
+Permet d'affiché les utilisateurs connéctés
+
+![``who``](/images/who.PNG)
+
+## Useradd
+
+Cette commande permet d'ajouté un utilisateur.
+
+![``useradd <Nom de l'utilisateur>``](/images/useradd.PNG)
+
+
+### Options / Objets
+
+- -g => permet de modifier le Gid
+- -u => permet de modifier le Uid
+- -d => créer l'utilisateur avec un répertoire à son nom
+- -G =>Permet d'ajouter d'autres groupes que celui de la valeur renseignée
+### Exemples
+
+![``useradd <nom utilisateur> -u <valeur> ``](/images/useradd2.PNG)
+<br>
+Cette commande permet de créer un tilisateur en choisissant son Gid et uis créant un répertoire avec son nom.
+
+## Cat 
+
+Permet d'ouvrir un fichier texte.
+
+![``cat <Nom du fichier>``](/images/cat.PNG)
+
+## Grep / rGrep
+
+Permet de rechercher un mot dans un fichier ou dans un répertoire.
+
+``grep <nom du fichier ou repertoire > <le mot rechercher>``
+
+## Find
+
+Permet de rechercher un fichier ou un répertoire
+
+``find <nom du fichier ou du dossier>``
+
+## Passwd/gPasswd
+
+Permet de modifié ou d'ajouté un mot de passe à un utilisateur ou à un groupes
+
+``passwd add <mot de passe>``
+
+## Kill
+
+Supprime des processus en cours 
+
+``kill <nom du processus>``
+
+## Halt
+
+Permet de reboot / arrêter /redémarrer la machine
+
+``halt``
+
+## Clear
+Efface l'invité de commande 
+
+``clear``
+
+# Commandes respéctives à la gestions des fichiers et répertoires 
+
+## Pwd
+Affiche le nom du répertoire courant
+
+``pwd``
+
+## Chmod,Chown,Chgroup
+
+Permet respéctivement de modifié l'accés aux fichiers et aux répertoires séléctionné ,de changer le propriétaire d'un fichier,changer le groupe d'utilisateur à qui appartien le fichier.
+
+``chmod <nom du fichier> 777 ``
+Donne la permission à tout le monde d'écrire, de lire et d'éxécuter le fichier.
+
+## LS
+Affiche la liste des fichiers 
+
+``ls``
+
+## mkdir 
+Créer un répertoire.
+``mkdir <nom du répertoire>``
+
+## CP,MV 
+Permet respeéctivement de copier un fichier, de le déplacer.
+``cp <nom du fichier>``
+
+
+## CD 
+Permet de changé de répertoire
+
+``cd <emplacement du répertoire>``
+
+## Rm,Rmdir 
+Effacer un fichier ou un répertoire
+
+`` rm <nom du fichier>``
+
+## Touch
+Permet de créer un fichier texte.
+
+``touch <nom du fichier>``
+
+
+
+
+
 
 
 ## Utilisation de Wireshark
