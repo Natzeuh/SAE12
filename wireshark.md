@@ -80,7 +80,7 @@ Pour capturer les paquets de toutes les interfaces vous pouvez choisir l'interfa
 
 Une fois que vous avez commencé une capture, vous pouvez filtrer les paquets en entrant une filtre dans la barre de filtres
 
-![Capture d'écran Wireshark](/images/wireshark_win_filter.png)
+![Capture d'écran Wireshark](/images/wireshark_win_filtre.png)
 
 Un simple se construit de la manière suivante
 ``<Caractérisitque>==<Contenu>``
