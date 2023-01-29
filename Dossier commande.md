@@ -26,52 +26,47 @@ ip link set down dev eno1 => désactiver la carte réseau eno1  <br><br>
 
 ### Exemple de commandes avec les objets ci-dessus
 
-- ``ip link set up dev <Nom de la carte réseaux>`` => Permet d'activé la carte réseaux <br>
-- ``ip addr add <Ip de la machine> dev <Nom de la carte réseaux>``<br> => permet d'attribué/ajouté une addresse à votre carte réseaux <br>
-- ``ip route add default via <Ip de la route> dev <Nom de la carte réseaux>`` <br>=> permet d'ajouté une route par défault
-- ``ip link show <Nom De Votre Interface>`` <br>=> montre les informations de la carte réseaux ciblé
-- ``ip a`` <br>
-=> Montre toutes les ip liés à une catre réseau de votre machine
+- [``ip link set up dev <Nom de la carte réseaux>`` <br>=> Permet d'activé la carte réseaux <br>](/image/ip/ipsetup.PNG)
+- [``ip addr add <Ip de la machine> dev <Nom de la carte réseaux>``<br> => permet d'attribué/ajouté une addresse à votre carte réseaux ](/image/ip/ipadd.PNG)<br>
+- [``ip route add default via <Ip de la route> dev <Nom de la carte réseaux>`` <br>=> permet d'ajouté une route par défault](/image/ip/iproute.PNG)
+- [``ip link show <Nom De Votre Interface>`` <br>=> montre les informations de la carte réseaux ciblé](/image/ip/iplinkshow.PNG)
+- [``ip a`` <br>=> Montre toutes les ip liés à une catre réseau de votre machine](/image/ip/ipa.PNG)
 
-## Sudo / Su
+##  Su
 
-Sudo permet de passer en mode SuperUser temporairement<br>
-``sudo``
-
-Su permet quand t a lui d'ouvrir la session du superuser <br>
-``su``
-
+Su permet d'ouvrir la session du superuser <br>
+[``su``](/image/reste/su.PNG)
 ## Man
 
 Cette commande permet de voir des informations sur une autre commande <br>
-``man``
+[``man``](/image/man1.PNG)<br>
+[Photo numéro 2](/image/man2.PNG)
 
 ## Exit
 Permet de quitter une interface <br>
 Par exemple: Si je souhaite quitté l'interface de l'users root je n'ais quà taper exit
 
-``exit``
+[``exit``](/image/exit.PNG)
+
+L'équivalent sur windows est aussi ``exit``
 
 ## ID
 
 Donne le Uid,Gid et le groupe de celui qui tape la commande. <br>
-``id``
+[``id``](/image/id.PNG)
   
 ## Ping
 
 cette commande permet de tester la connection entre 2 machine (Il faut
 utiliser la combinaison de touches « Ctrl »+ « C » pour terminer son exécution si on y a pas mis d'options)
 <br>
-``ping <ip de la machine>``
+[``ping <ip de la machine>``](/image/ping.PNG)
 
-## Mii-tool/Ethool
-
-ces commandes permettent d'affiché ou de modifié certains paramètre de la carte réseaux , elles doivent çetre installé avec le pack net-tools
-
-``mii-tool -<options souhaitez>``
+L'équivalent windows est aussi ``ping``
 
 ## APT
 Permet de géré l'installation, la MAJ et la désinstallation à partir de source APT
+
 
 ### Objets
 
@@ -80,18 +75,19 @@ Permet de géré l'installation, la MAJ et la désinstallation à partir de sour
 - Show => Donne des informations sur la package séléctionné 
 - list => Donne la liste des packages APT
 
-``apt install <objet>``
+[``apt install <objet>``](/image/aptinstall.PNG)
 
 ## Who
 Permet d'affiché les utilisateurs connéctés
 
-``who``
+[``who``](/image/who.PNG)
 
 ## Useradd
 
 Cette commande permet d'ajouté un utilisateur.
 
-``useradd <Nom de l'utilisateur``>
+[``useradd <Nom de l'utilisateur>``](/image/useradd.PNG)
+
 
 ### Options / Objets
 
@@ -101,7 +97,7 @@ Cette commande permet d'ajouté un utilisateur.
 - -G =>Permet d'ajouté d'autres groupes que celui de la valeur renseigné 
 ### Exemples
 
-``useradd <nom utilisateur> -g <valeur> -d``
+[``useradd <nom utilisateur> -u <valeur> ``](/image/useradd2.PNG)
 <br>
 Cette commande permet de créer un tilisateur en choisissant son Gid et uis créant un répertoires avec son nom.
 
@@ -109,7 +105,7 @@ Cette commande permet de créer un tilisateur en choisissant son Gid et uis cré
 
 Permet d'ouvrir un fichier texte.
 
-``cat <Nom du fichier>``
+[``cat <Nom du fichier>``](/image/cat.PNG)
 
 ## Grep / rGrep
 
@@ -184,7 +180,10 @@ Effacer un fichier ou un répertoire
 
 `` rm <nom du fichier>``
 
+## Touch
+Permet de créer un fichier texte.
 
+``touch <nom du fichier>``
 
 
 
