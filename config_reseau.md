@@ -29,5 +29,6 @@
 |Linux||Windows|
 |:-|-|:-|
 |Connaitre les interfaces présentes et leur état||Connaitre les interfaces présentes et leur état|
+| ![capture d'écran terminal](/images/bash_ip_link_show.png)||
 |``ip link show``|||
 |``sudo ip link set <up/down> dev <nom de la carte>``||``netsh interface set interface <nom de l'interface> <enable/disable>``|
