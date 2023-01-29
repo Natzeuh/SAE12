@@ -25,3 +25,4 @@ Si votre carte réseau fonctionne, vérifiez alors le lien avec votre réseau
 |:-|-|:-|
 |``watch ethtool <nom de l'interface>`` <br> Si la commande ne marche pas, pensez a installer ``ethtool`` avec la commande ``sudo apt install ethtool``|||
 |![Caputre d'écran du terminal](/images/bash_linux_ethtool.png)||![capture d'écran du terminal](/images/cmd_win_netstat.png)|
+|Si l'utilitaire vous retourne une page contenant ``Link detected: no`` alors votre connexion ne fonctionne pas.||Si votre carte réseau ne reçoit pas de paquets, alors le lien ne foncionne pas|
