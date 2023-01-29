@@ -24,13 +24,4 @@
 |``ip a add <adresse ip>/<masque> dev <carte réseau>``||``netsh interface ip set address name="<nom carte réseau>" static <ip> <masque> <passerelle>``|
 |``sudo ip r add default via <ip passerelle> dev <nom de la carte>``|||
 
-### Activer / désactiver une carte réseau
-
-|Linux||Windows|
-|:-|-|:-|
-|Connaitre les interfaces présentes et leur état||Connaitre les interfaces présentes et leur état|
-|``ip link show``||``netsh interface ipv4 show inter``|
-| ![capture d'écran terminal](/images/bash_linux_ip_link_show.png)||![capture d'écran terminal](/images/cmd_win_netsh_interface.png)|
-|``sudo ip link set <up/down> dev <nom de la carte>``||``netsh interface set interface <nom de l'interface> <enable/disable>``|
-|![capture d'écran terminal](/images/bash_linux_ip_link_set_up.png)||![capture d'écran terminal](/images/cmd_win_netsh_interface_enable.png)|
 
