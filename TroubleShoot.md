@@ -79,12 +79,12 @@ Par exemple: Si je souhaite quitté l'interface de l'users root je n'ais quà ta
 
 L'équivalent sur windows est aussi ``exit``
 
-## ID
+### ID
 
 Donne le Uid,Gid et le groupe de celui qui tape la commande. <br>
 ![``id``](/images/id.PNG)
   
-## Ping
+### Ping
 
 cette commande permet de tester la connection entre 2 machine (Il faut
 utiliser la combinaison de touches « Ctrl »+ « C » pour terminer son exécution si on y a pas mis d'options)
@@ -93,11 +93,11 @@ utiliser la combinaison de touches « Ctrl »+ « C » pour terminer son exécut
 
 L'équivalent windows est aussi ``ping``
 
-## APT
+### APT
 Permet de géré l'installation, la MAJ et la désinstallation à partir de source APT
 
 
-### Objets
+#### Objets
 
 - install ,remove => permet d'installer/désinstaller un package APT
 - upgrade => mettre à jour le package APT
@@ -106,117 +106,114 @@ Permet de géré l'installation, la MAJ et la désinstallation à partir de sour
 
 ![``apt install <objet>``](/images/aptinstall.PNG)
 
-## Who
+### Who
 Permet d'affiché les utilisateurs connéctés
 
 ![``who``](/images/who.PNG)
 
-## Useradd
+### Useradd
 
 Cette commande permet d'ajouté un utilisateur.
 
 ![``useradd <Nom de l'utilisateur>``](/images/useradd.PNG)
 
 
-### Options / Objets
+#### Options / Objets
 
 - -g => permet de modifier le Gid
 - -u => permet de modifier le Uid
 - -d => créer l'utilisateur avec un répertoire à son nom
 - -G =>Permet d'ajouter d'autres groupes que celui de la valeur renseignée
-### Exemples
+
+#### Exemples
 
 ![``useradd <nom utilisateur> -u <valeur> ``](/images/useradd2.PNG)
 <br>
 Cette commande permet de créer un tilisateur en choisissant son Gid et uis créant un répertoire avec son nom.
 
-## Cat 
+### Cat 
 
 Permet d'ouvrir un fichier texte.
 
 ![``cat <Nom du fichier>``](/images/cat.PNG)
 
-## Grep / rGrep
+### Grep / rGrep
 
 Permet de rechercher un mot dans un fichier ou dans un répertoire.
 
 ``grep <nom du fichier ou repertoire > <le mot rechercher>``
 
-## Find
+### Find
 
 Permet de rechercher un fichier ou un répertoire
 
 ``find <nom du fichier ou du dossier>``
 
-## Passwd/gPasswd
+### Passwd/gPasswd
 
-Permet de modifié ou d'ajouté un mot de passe à un utilisateur ou à un groupes
+Permet de modifier ou d'ajouter un mot de passe à un utilisateur ou à un groupes
 
 ``passwd add <mot de passe>``
 
-## Kill
+### Kill
 
 Supprime des processus en cours 
 
 ``kill <nom du processus>``
 
-## Halt
+### Halt
 
 Permet de reboot / arrêter /redémarrer la machine
 
 ``halt``
 
-## Clear
-Efface l'invité de commande 
+### Clear
+Remets l'invite de commande a zéro
 
 ``clear``
 
-# Commandes respéctives à la gestions des fichiers et répertoires 
+## Commandes particulères à la gestions des fichiers et répertoires 
 
-## Pwd
+### Pwd
 Affiche le nom du répertoire courant
 
 ``pwd``
 
-## Chmod,Chown,Chgroup
+### Chmod,Chown,Chgroup
 
-Permet respéctivement de modifié l'accés aux fichiers et aux répertoires séléctionné ,de changer le propriétaire d'un fichier,changer le groupe d'utilisateur à qui appartien le fichier.
+Permet respectivement de modifier l'accés aux fichiers et aux répertoires sélectionner ,de changer le propriétaire d'un fichier,changer le groupe d'utilisateur à qui appartien le fichier.
 
 ``chmod <nom du fichier> 777 ``
 Donne la permission à tout le monde d'écrire, de lire et d'éxécuter le fichier.
 
-## LS
+### LS
 Affiche la liste des fichiers 
 
 ``ls``
 
-## mkdir 
+### mkdir 
 Créer un répertoire.
 ``mkdir <nom du répertoire>``
 
-## CP,MV 
+### CP,MV 
 Permet respeéctivement de copier un fichier, de le déplacer.
 ``cp <nom du fichier>``
 
 
-## CD 
+### CD 
 Permet de changé de répertoire
 
 ``cd <emplacement du répertoire>``
 
-## Rm,Rmdir 
+### Rm,Rmdir 
 Effacer un fichier ou un répertoire
 
 `` rm <nom du fichier>``
 
-## Touch
-Permet de créer un fichier texte.
+### Touch
+Permet de changer la date de dernière ouverture au moment T, (fréquement utilsé pour créer un fichier)
 
 ``touch <nom du fichier>``
-
-
-
-
 
 
 
